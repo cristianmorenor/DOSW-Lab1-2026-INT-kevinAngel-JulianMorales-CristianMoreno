@@ -8,8 +8,7 @@ public class MensajeBienvenida {
 
     public static String generarSaludo(List<Estudiante> estudiantes) {
 
-        // Construye la descripción de cada estudiante usando una expresión lambda
-        // dentro de un stream (IntStream para saber si es el primero o no)
+
         List<String> descripciones = IntStream.range(0, estudiantes.size())
                 .mapToObj(i -> {
                     Estudiante e = estudiantes.get(i);
@@ -29,7 +28,6 @@ public class MensajeBienvenida {
             descripcionCompleta = todosMenosUltimo + ", y " + ultimo;
         }
 
-        // Construye la lista de correos usando stream(), map() y collect()
         List<String> listaCorreos = estudiantes.stream()
                 .map(Estudiante::getCorreo)
                 .collect(Collectors.toList());
