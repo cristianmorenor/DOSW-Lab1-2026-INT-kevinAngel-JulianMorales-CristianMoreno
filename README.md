@@ -1,4 +1,4 @@
-"# DOSW-Lab1-2026-INT-kevinAngel-JulianMorales-CristianMoreno" 
+"# DOSW-Lab1-2026-INT-kevinAngel-JulianMorales-CristianMoreno" a
 
 <img width="1024" height="1536" alt="hoja de vida" src="https://github.com/user-attachments/assets/006291e0-a7e9-4f75-8c6b-f45a8e74d0c0" />
 
