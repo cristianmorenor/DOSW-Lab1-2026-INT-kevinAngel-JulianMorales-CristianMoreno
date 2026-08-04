@@ -7,7 +7,7 @@
 
 
 
-<img width="633" height="888" alt="image" src="https://github.com/user-attachments/assets/6d9c838f-3165-41fc-8985-3379b972d691" />
+<img width="623" height="884" alt="image" src="https://github.com/user-attachments/assets/f5be2341-7442-4fd5-92c0-f48a38ce78b4" />
 
 ## Mi nombre es Cristian Santiago Moreno Ruiz y considero que soy la persona que están buscando para poder completar el equipo por diferentes razones. En primer lugar mi fortaleza es que me esfuerzo mucho por entender y cuando no tengo la respuesta busco por medio de la forma que sea encontrarla. En segundo lugar una de is fortalezas es la puntualidad en cuanto a mis obligaciones, entregas y llegadas a lugares. Por otro lado cuento con experiencia que he adquirido en otras asignaturas donde he podido conocer y reforzar diferentes lenguajes de programación y me siento muy bien en los que son Java y SQL por lo cual siento que puedo aportar mucho al equipo. Por ultimo me gustaria resaltar mi compromiso con los proyectos puesto que una vez empiezo uno lo acabo a pesar de las dificultades. 
 
