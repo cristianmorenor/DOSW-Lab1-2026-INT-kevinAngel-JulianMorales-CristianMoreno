@@ -8,11 +8,15 @@ public class MensajeBienvenida {
 
     public static String generarSaludo(List<Estudiante> estudiantes) {
 
-
         List<String> descripciones = IntStream.range(0, estudiantes.size())
                 .mapToObj(i -> {
                     Estudiante e = estudiantes.get(i);
-                    String prefijo = (i == 0) ? "estudiante de " : "de ";
+                    String prefijo;
+                    if (i == 0) {
+                        prefijo = "estudiante de ";
+                    } else {
+                        prefijo = "de ";
+                    }
                     return e.getNombre() + ", " + prefijo + e.getSemestre()
                             + "° semestre de " + e.getEdad() + " años";
                 })
@@ -42,10 +46,22 @@ public class MensajeBienvenida {
             correos = todosMenosUltimo + " y " + ultimo;
         }
 
-        String tipoGrupo = (estudiantes.size() == 2) ? "la pareja" : "el equipo";
+        String tipoGrupo;
+        if (estudiantes.size() == 2) {
+            tipoGrupo = "la pareja";
+        } else {
+            tipoGrupo = "el equipo";
+        }
+
+        String generoConformado;
+        if (estudiantes.size() == 2) {
+            generoConformado = "a";
+        } else {
+            generoConformado = "o";
+        }
 
         return "¡Hola, bienvenidos! Somos " + tipoGrupo + " conformad"
-                + (estudiantes.size() == 2 ? "a" : "o") + " por "
+                + generoConformado + " por "
                 + descripcionCompleta + ". Nuestros correos son: "
                 + correos + ".";
     }
