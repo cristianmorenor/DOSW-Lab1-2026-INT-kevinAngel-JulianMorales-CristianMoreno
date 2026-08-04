@@ -1,6 +1,7 @@
+
 "# DOSW-Lab1-2026-INT-kevinAngel-JulianMorales-CristianMoreno" a
 
-<img width="1024" height="1536" alt="hoja de vida" src="https://github.com/user-attachments/assets/006291e0-a7e9-4f75-8c6b-f45a8e74d0c0" />
+<img width="1024" height="1536" alt="hoja de vida" src="https://github.com/user-attachments/assets/a77b84ba-5365-476e-8942-47c8588784f9" />
 
 ## Mi nombre es Kevin Andrey Angel Acevedo, considero que mis capacidades me permiten aprender temas nuevos de forma sencilla, aunque todavía estoy aprendiendo estoy lleno de ganas de  continuar adquiriendo conocimiento, en el equipo puedo aportar la proactividad y la pulir detalles, no soy perfeccionista pero me gusta hacer lo que hago de la mejor forma posible.
 
