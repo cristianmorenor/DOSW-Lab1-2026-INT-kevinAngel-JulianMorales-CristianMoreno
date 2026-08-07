@@ -19,14 +19,10 @@ public class CanalA {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.print("Mensaje interceptado: ");
         String mensajeInterceptado = scanner.nextLine();
-
         String resultado = amplificarMensaje(mensajeInterceptado);
-
         System.out.println("Canal A: " + resultado);
-
         scanner.close();
     }
 }
