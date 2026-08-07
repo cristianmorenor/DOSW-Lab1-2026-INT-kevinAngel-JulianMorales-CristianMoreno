@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
-public class CanalB {
+public class Reto5 {
 
     public static TreeSet<Integer> filtrarMultiplosDe5(TreeSet<Integer> numeros) {
         return numeros.stream()
