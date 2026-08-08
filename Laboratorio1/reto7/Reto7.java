@@ -24,7 +24,7 @@ public class Reto7 {
                 .filter(j -> j.getEstado() == Jugador.Estado.ACTIVO)
                 .collect(Collectors.toList());
 
-        System.out.println("Prueba 1 — Luz Roja Luz Verde:");
+        System.out.println("Luz Roja Luz Verde:");
         System.out.println("  " + pasan.stream().map(Jugador::getNombre).collect(Collectors.joining(", ")) + " PASAN");
         eliminados.forEach(j -> System.out.println("  Jugador " + j.getNumero() + " ELIMINADO"));
 
@@ -52,7 +52,7 @@ public class Reto7 {
                     premio[0] += 50_000_000;
                 });
 
-        System.out.println("Prueba 2 — Los Dados:");
+        System.out.println("Los Dados:");
         System.out.println("  " + pasan.stream().map(j -> j.getNombre() + "(" + dados.get(j.getNumero()) + ")").collect(Collectors.joining(", ")) + " PASAN");
         jugadores.stream()
                 .filter(j -> j.getEstado() == Jugador.Estado.ELIMINADO && !pasan.contains(j))
