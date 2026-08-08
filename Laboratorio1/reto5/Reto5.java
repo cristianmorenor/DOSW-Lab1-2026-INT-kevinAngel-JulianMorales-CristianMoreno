@@ -13,7 +13,7 @@ public class Reto5 {
     public static Set<Integer> crearHashSetConScanner() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("--- RETO 5: ESTUDIANTE A (HashSet) ---");
+        System.out.println(" RETO 5: ESTUDIANTE A  ");
         System.out.println("Ingresa los números separados por espacios:");
         String entrada = scanner.nextLine();
 
@@ -47,11 +47,10 @@ public class Reto5 {
         System.out.print("\nIngrese los números del TreeSet separados por espacio: ");
         String linea = scanner.nextLine();
 
-        for (String parte : linea.trim().split("\\s+")) {
-            if (!parte.isEmpty()) {
-                treeSet.add(Integer.parseInt(parte));
-            }
-        }
+        TreeSet<Integer> treeSet = Arrays.stream(linea.trim().split("\\s+"))
+                .filter(parte -> !parte.isEmpty())
+                .map(Integer::parseInt)
+                .collect(Collectors.toCollection(TreeSet::new));
 
         TreeSet<Integer> resultadoB = filtrarMultiplosDe5(treeSet);
         resultadoB.forEach(n -> System.out.println("Número en arena: " + n));
