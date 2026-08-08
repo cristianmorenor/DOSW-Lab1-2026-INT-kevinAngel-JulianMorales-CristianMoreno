@@ -1,33 +1,26 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Hashtable;
 import java.util.Scanner;
 
 public class Reto4 {
 
-    public static Map<String, Integer> crearHashMapConScanner() {
-        Map<String, Integer> mapa = new HashMap<>();
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Hashtable<String, Integer> hashtable = new Hashtable<>();
 
-        System.out.println("--- RETO 4: ESTUDIANTE A (HashMap) ---");
-        System.out.println("¿Cuántos pares clave-valor deseas ingresar?");
-        int n = Integer.parseInt(scanner.nextLine());
+        System.out.println("Ingresar cantidad de pares");
+        int count = Integer.parseInt(scanner.nextLine());
 
-        for (int i = 0; i < n; i++) {
-            System.out.println("Ingresa la clave :");
-            String clave = scanner.nextLine().trim();
-
-            System.out.println("Ingresa el valor numérico:");
-            int valor = Integer.parseInt(scanner.nextLine());
-
-
-            mapa.putIfAbsent(clave, valor);
+        for (int i = 0; i < count; i++) {
+            System.out.println("Ingrese key/clave");
+            String key = scanner.nextLine();
+            System.out.println("Ingrese valor/value");
+            int value = Integer.parseInt(scanner.nextLine());
+            hashtable.put(key, value);
         }
 
-        return mapa;
-    }
+        System.out.println("Hashtable");
+        hashtable.forEach((key, value) -> System.out.println(key + ": " + value));
 
-    public static void main(String[] args) {
-        Map<String, Integer> resultadoA = crearHashMapConScanner();
-        System.out.println("\nHashMap resultante (sin duplicados): " + resultadoA);
+        scanner.close();
     }
 }
