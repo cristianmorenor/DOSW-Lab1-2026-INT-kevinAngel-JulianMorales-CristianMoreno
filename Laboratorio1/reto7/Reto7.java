@@ -23,7 +23,7 @@ public class Reto7 {
 
         jugadores.stream()
                 .filter(j -> j.getEstado() == Jugador.Estado.ACTIVO)
-                .filter(j -> !pasan.contains(j))
+                .filter(j -> !pass.contains(j))
                 .forEach(j -> j.setEstado(Jugador.Estado.ELIMINADO));
 
         return pass;
@@ -39,8 +39,8 @@ public class Reto7 {
         );
 
         Map<Integer, Integer> dados = new HashMap<>();
-        System.out.println("Prueba 2 — Los Dados:");
-        List<Jugador> pasan = prueba2LosDados(jugadores, dados);
+        System.out.println("Prueba Dados:");
+        List<Jugador> pass = pruebaDados(players, dados);
 
         String namesPass= pass.stream()
                 .map(j -> j.getNombre() + "(" + dados.get(j.getNumero()) + ")")
