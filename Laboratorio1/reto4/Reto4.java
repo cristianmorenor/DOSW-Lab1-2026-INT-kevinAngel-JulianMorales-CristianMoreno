@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Reto4 {
 
     public static Map<String, Integer> ejecutarParteA(Scanner scanner) {
-        System.out.println("--- RETO 4: ESTUDIANTE A (HashMap) ---");
+        System.out.println(" RETO 4: ESTUDIANTE A ");
         System.out.println("¿Cuántos pares clave-valor deseas ingresar?");
         int n = Integer.parseInt(scanner.nextLine());
 
@@ -29,7 +29,7 @@ public class Reto4 {
     }
 
     public static void ejecutarParteB(Scanner scanner) {
-        System.out.println("\n--- RETO 4: ESTUDIANTE B (Hashtable) ---");
+        System.out.println("\nRETO 4: ESTUDIANTE B ");
         System.out.println("Ingresa cantidad de pares:");
         int count = Integer.parseInt(scanner.nextLine());
 
