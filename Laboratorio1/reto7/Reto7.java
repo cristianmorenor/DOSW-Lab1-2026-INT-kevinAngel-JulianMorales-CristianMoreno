@@ -1,4 +1,4 @@
-package Laboratorio1.reto7;
+
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
@@ -16,17 +16,17 @@ public class Reto7 {
                 .filter(j -> j.getEstado() == Jugador.Estado.ACTIVO)
                 .forEach(j -> dados.put(j.getNumero(), random.nextInt(6) + 1));
 
-        List<Jugador> pass = jugadores.stream()
+        List<Jugador> continueP = jugadores.stream()
                 .filter(j -> j.getEstado() == Jugador.Estado.ACTIVO)
                 .filter(j -> dados.get(j.getNumero()) % 2 == 0)
                 .collect(Collectors.toList());
 
         jugadores.stream()
                 .filter(j -> j.getEstado() == Jugador.Estado.ACTIVO)
-                .filter(j -> !pass.contains(j))
+                .filter(j -> !continueP.contains(j))
                 .forEach(j -> j.setEstado(Jugador.Estado.ELIMINADO));
 
-        return pass;
+        return continueP;
     }
 
     public static void main(String[] args) {
@@ -40,12 +40,12 @@ public class Reto7 {
 
         Map<Integer, Integer> dados = new HashMap<>();
         System.out.println("Prueba Dados:");
-        List<Jugador> pass = pruebaDados(players, dados);
+        List<Jugador> continueP = pruebaDados(players, dados);
 
-        String namesPass= pass.stream()
+        String namesContinue = continueP.stream()
                 .map(j -> j.getNombre() + "(" + dados.get(j.getNumero()) + ")")
                 .collect(Collectors.joining(", "));
-        System.out.println(" " + namesPass + " PASAN");
+        System.out.println(" " + namesContinue + " PASAN");
 
         players.stream()
                 .filter(j -> j.getEstado() == Jugador.Estado.ELIMINADO)
