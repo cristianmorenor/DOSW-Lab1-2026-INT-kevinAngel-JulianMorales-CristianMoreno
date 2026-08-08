@@ -1,0 +1,27 @@
+# Archivos compilados de Java
+*.class
+
+# Carpetas de compilación (si usan Maven/Gradle en el futuro)
+target/
+build/
+out/
+bin/
+
+# Configuración de VS Code
+.vscode/
+
+# Configuración de IntelliJ
+.idea/
+*.iml
+
+# Configuración de Eclipse
+.classpath
+.project
+.settings/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
