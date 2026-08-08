@@ -2,7 +2,7 @@ package Laboratorio1.reto3;
 
 import java.util.Scanner;
 
-public class CanalA {
+public class Reto3 {
 
     public static String amplificarMensaje(String mensaje) {
         StringBuilder sb = new StringBuilder();
