@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.stream.IntStream;
+import java.util.stream.Collectors;
 
 public class Reto4 {
 
