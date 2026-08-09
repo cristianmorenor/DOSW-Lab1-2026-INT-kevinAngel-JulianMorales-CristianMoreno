@@ -1,10 +1,10 @@
-# 🚀 Reporte de Desarrollo y Colaboración (Laboratorio #1)
+#  Reporte de Desarrollo y Colaboración (Laboratorio #1)
 
 Este documento detalla el proceso de desarrollo, integración y resolución de conflictos de los retos del **Laboratorio #1** en los que participó **Kevin Andrey Angel Acevedo (Estudiante A)**, colaborando con **Cristian Moreno** (Retos 2 y 4) y **Julian Morales** (Retos 5 y 6).
 
 ---
 
-## 🗺️ Resumen del Flujo de Trabajo en Git
+##  Resumen del Flujo de Trabajo en Git
 
 La colaboración se estructuró a través de ramas de características (`feature/`) integradas hacia la rama de desarrollo común (`develop`). A continuación, se presenta un esquema visual del proceso de integración y los puntos donde se gestionaron los conflictos:
 
@@ -43,16 +43,16 @@ gitGraph
 
 ---
 
-## 🏎️ Reto #2: Carrera en Paralelo (Colaboración: Cristian Moreno & Kevin Angel)
+##  Reto #2: Carrera en Paralelo (Colaboración: Cristian Moreno & Kevin Angel)
 
-### 📋 Enunciado y Roles
+###  Enunciado y Roles
 *   **Estudiante A (Carril 2 - Kevin Angel):** Calcular el número mínimo y la cantidad de datos ingresados mediante expresiones lambda.
 *   **Estudiante B (Carril 1 - Cristian Moreno):** Calcular el número máximo de un listado mediante expresiones lambda.
 *   **Choque 1:** Combinar máximo, mínimo y cantidad de datos.
 *   **Choque 2:** Verificar si el mayor es múltiplo de 2 (Carril 1) y divisible entre 2 (Carril 2).
 *   **Meta Final:** Fusionar todo en una función que reciba dos listas y devuelva un objeto `Resultados` con el análisis completo (máximo, mínimo, cantidad, divisibilidad y paridad de la cantidad).
 
-### 🛠️ Desarrollo Paso a Paso
+###  Desarrollo Paso a Paso
 1.  **Desarrollo de Kevin (Estudiante A):**
     En su rama, Kevin creó inicialmente el archivo `Minimo.java` e implementó dos funciones lambda:
     *   `obtenerMinimo`: `lista -> lista.stream().min(Integer::compareTo).orElse(0);`
@@ -67,14 +67,14 @@ gitGraph
 
 ---
 
-## 🔑 Reto #4: El Tesoro de las Llaves Duplicadas (Colaboración: Cristian Moreno & Kevin Angel)
+##  Reto #4: El Tesoro de las Llaves Duplicadas (Colaboración: Cristian Moreno & Kevin Angel)
 
-### 📋 Enunciado y Roles
+###  Enunciado y Roles
 *   **Estudiante A (Kevin Angel):** Almacenar pares clave-valor en un `HashMap` ignorando claves duplicadas (preservando el primer valor).
 *   **Estudiante B (Cristian Moreno):** Almacenar pares en un `Hashtable` garantizando sincronización.
 *   **Ambos (Choque):** Combinar ambos mapas. Si hay conflicto de clave, priorizar el valor del `Hashtable`. Retornar claves ordenadas alfabéticamente y en mayúsculas utilizando la API de Streams (`stream()`, `map()`, `sorted()`, `Collectors.toMap()`).
 
-### 🛠️ Desarrollo Paso a Paso
+###  Desarrollo Paso a Paso
 1.  **Desarrollo de Kevin (Estudiante A):**
     Kevin implementó la lógica para capturar dinámicamente los pares clave-valor del usuario en un `HashMap` empleando `mapa.putIfAbsent(clave, valor)` para ignorar automáticamente claves ya registradas, manteniendo el primer valor ingresado.
 2.  **Desarrollo de Cristian (Estudiante B):**
@@ -97,14 +97,14 @@ gitGraph
 
 ---
 
-## ⚔️ Reto #5: Batalla de Conjuntos (Colaboración: Kevin Angel & Julian Morales)
+##  Reto #5: Batalla de Conjuntos (Colaboración: Kevin Angel & Julian Morales)
 
-### 📋 Enunciado y Roles
+###  Enunciado y Roles
 *   **Estudiante A (Kevin Angel):** Almacenar números desordenados en un `HashSet` y filtrar (eliminar) múltiplos de 3.
 *   **Estudiante B (Julian Morales):** Almacenar números ordenados ascendentemente en un `TreeSet` y filtrar múltiplos de 5.
 *   **Ambos (Choque):** Combinar ambos conjuntos en un único `TreeSet` ordenado sin duplicados usando programación funcional.
 
-### 🛠️ Desarrollo Paso a Paso
+###  Desarrollo Paso a Paso
 1.  **Desarrollo de Kevin (Estudiante A):**
     Kevin creó `Reto5.java` programando `crearHashSetConScanner()` utilizando streams para convertir la entrada en texto en enteros, pasarlos a un set desordenado y aplicar el filtro `filter(n -> n % 3 != 0)`.
 2.  **Desarrollo de Julian (Estudiante B):**
@@ -131,14 +131,14 @@ gitGraph
 
 ---
 
-## 🤖 Reto #6: La Máquina de Decisiones (Colaboración: Kevin Angel & Julian Morales)
+##  Reto #6: La Máquina de Decisiones (Colaboración: Kevin Angel & Julian Morales)
 
-### 📋 Enunciado y Roles
+###  Enunciado y Roles
 *   **Estudiante A (Fragmento 1 - Kevin Angel):** Implementar switch-case para los comandos: "SALUDAR", "DESPEDIR", "CANTAR", "DANZAR".
 *   **Estudiante B (Fragmento 2 - Julian Morales):** Implementar switch-case para los comandos: "BROMEAR", "GRITAR", "SUSURRAR", "ANALIZAR".
 *   **Ambos (Choque):** Unificar todos los comandos en un solo `Map<String, Runnable>` utilizando expresiones lambda para guardar las acciones y ejecutarlas directamente mediante `.run()`.
 
-### 🛠️ Desarrollo Paso a Paso
+###  Desarrollo Paso a Paso
 1.  **Desarrollo de Kevin (Estudiante A):**
     Kevin creó la primera versión de `Reto6.java` con el método `ejecutarComandoFragmento1(String comando)` y un switch-case estándar estructurando las 4 respuestas correspondientes a su fragmento.
 2.  **Desarrollo de Julian (Estudiante B):**
