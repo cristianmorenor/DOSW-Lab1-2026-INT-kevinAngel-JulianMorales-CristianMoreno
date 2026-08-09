@@ -43,26 +43,6 @@ gitGraph
 
 ---
 
-##  Reto #3: La Máquina de los Códigos Secretos (Colaboración: Julian Morales & Cristian Moreno)
-
-###  Enunciado y Roles
-*   **Estudiante A (Canal A - Julian Morales):** Usando `StringBuilder`, implementar un método que reciba el mensaje cifrado y lo repita 3 veces separado por un espacio, simulando la amplificación de la señal.
-*   **Estudiante B (Canal B - Cristian Moreno):** Usando `StringBuffer`, implementar un método que reciba el mensaje y lo invierta completamente.
-*   **Ambos (Descifrado final):** Unificar ambos canales en una sola función que primero amplifique y luego descifre el mensaje, usando lambda para invocarla y `stream()` para procesar las repeticiones.
-
-###  Desarrollo Paso a Paso
-1.  **Desarrollo de Julian (Estudiante A):**
-    En su rama, Julian creó la carpeta `Laboratorio1` y el archivo `CanalA.java`, implementando la amplificación del mensaje mediante `StringBuilder`, repitiendo el texto recibido 3 veces separado por espacios (commit `af83add`). Posteriormente ajustó la lógica de lectura por consola con `Scanner` (commit `132a2c5`).
-2.  **Desarrollo de Cristian (Estudiante B):**
-    Cristian trabajó en paralelo en su propia rama la lógica del Canal B, implementando la inversión del mensaje mediante `StringBuffer.reverse()`.
-3.  **Resolución de Conflictos en el Merge:**
-    *   **Conflicto:** Al integrar ambas ramas en `develop`, se generó una discrepancia de nomenclatura entre el archivo `CanalA.java` de Julian y la estructura de paquetes requerida (`reto3/Reto3.java`), además de la necesidad de fusionar la lógica de ambos canales en un único archivo.
-    *   **Solución:** Se eliminó el archivo original `CanalA.java` (commit `cbb670a`) y se consolidó todo en `Reto3.java`, integrando el Canal A (`StringBuilder`) y el Canal B (`StringBuffer`) en una sola clase (commit `492571f`).
-4.  **Integración Final (Descifrado):**
-    Se implementó una función combinada mediante una expresión lambda de tipo `Function<String, String>`, que aplica primero la amplificación (usando `stream()` con `IntStream.range()` y `Collectors.joining()`) y luego la inversión del mensaje resultante, cumpliendo así con el requisito de usar `stream()` para procesar las repeticiones y lambda para invocar la función unificada.
-
----
-
 ##  Reto #2: Carrera en Paralelo (Colaboración: Cristian Moreno & Kevin Angel)
 
 ###  Enunciado y Roles
@@ -84,6 +64,27 @@ gitGraph
     *   **Conflicto:** Se generó un conflicto debido a la duplicidad de archivos con distinta nomenclatura (`Minimo.java` vs `Reto2.java`) y firmas de clases internas similares.
     *   **Solución:** Se decidió unificar el código en un único archivo `Reto2.java` y se procedió a eliminar `Minimo.java` (`git rm`).
     *   **Meta Final:** Cristian completó la integración final definiendo una clase `Resultados` y encapsulando todo en la función lambda `allResults` para procesar ambas listas y formatear la salida exacta exigida.
+
+---
+
+##  Reto #3: La Máquina de los Códigos Secretos (Colaboración: Julian Morales & Cristian Moreno)
+
+###  Enunciado y Roles
+*   **Estudiante A (Canal A - Julian Morales):** Usando `StringBuilder`, implementar un método que reciba el mensaje cifrado y lo repita 3 veces separado por un espacio, simulando la amplificación de la señal.
+*   **Estudiante B (Canal B - Cristian Moreno):** Usando `StringBuffer`, implementar un método que reciba el mensaje y lo invierta completamente.
+*   **Ambos (Descifrado final):** Unificar ambos canales en una sola función que primero amplifique y luego descifre el mensaje, usando lambda para invocarla y `stream()` para procesar las repeticiones.
+
+###  Desarrollo Paso a Paso
+1.  **Desarrollo de Julian (Estudiante A):**
+    En su rama, Julian creó la carpeta `Laboratorio1` y el archivo `CanalA.java`, implementando la amplificación del mensaje mediante `StringBuilder`, repitiendo el texto recibido 3 veces separado por espacios (commit `af83add`). Posteriormente ajustó la lógica de lectura por consola con `Scanner` (commit `132a2c5`).
+2.  **Desarrollo de Cristian (Estudiante B):**
+    Cristian trabajó en paralelo en su propia rama la lógica del Canal B, implementando la inversión del mensaje mediante `StringBuffer.reverse()`.
+3.  **Resolución de Conflictos en el Merge:**
+    *   **Conflicto:** Al integrar ambas ramas en `develop`, se generó una discrepancia de nomenclatura entre el archivo `CanalA.java` de Julian y la estructura de paquetes requerida (`reto3/Reto3.java`), además de la necesidad de fusionar la lógica de ambos canales en un único archivo.
+    *   **Solución:** Se eliminó el archivo original `CanalA.java` (commit `cbb670a`) y se consolidó todo en `Reto3.java`, integrando el Canal A (`StringBuilder`) y el Canal B (`StringBuffer`) en una sola clase (commit `492571f`).
+4.  **Integración Final (Descifrado):**
+    Se implementó una función combinada mediante una expresión lambda de tipo `Function<String, String>`, que aplica primero la amplificación (usando `stream()` con `IntStream.range()` y `Collectors.joining()`) y luego la inversión del mensaje resultante, cumpliendo así con el requisito de usar `stream()` para procesar las repeticiones y lambda para invocar la función unificada.
+
 
 ---
 
