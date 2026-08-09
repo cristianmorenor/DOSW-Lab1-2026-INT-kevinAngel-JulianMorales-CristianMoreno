@@ -161,5 +161,3 @@ gitGraph
 
 ---
 
-> [!NOTE]
-> Todo el desarrollo del laboratorio se realizó bajo el paradigma de programación declarativa y funcional, priorizando el uso de la API de Streams y Expresiones Lambda de Java para garantizar código limpio, mantenible y eficiente.
