@@ -43,6 +43,26 @@ gitGraph
 
 ---
 
+##  Reto #3: La Máquina de los Códigos Secretos (Colaboración: Julian Morales & Cristian Moreno)
+
+###  Enunciado y Roles
+*   **Estudiante A (Canal A - Julian Morales):** Usando `StringBuilder`, implementar un método que reciba el mensaje cifrado y lo repita 3 veces separado por un espacio, simulando la amplificación de la señal.
+*   **Estudiante B (Canal B - Cristian Moreno):** Usando `StringBuffer`, implementar un método que reciba el mensaje y lo invierta completamente.
+*   **Ambos (Descifrado final):** Unificar ambos canales en una sola función que primero amplifique y luego descifre el mensaje, usando lambda para invocarla y `stream()` para procesar las repeticiones.
+
+###  Desarrollo Paso a Paso
+1.  **Desarrollo de Julian (Estudiante A):**
+    En su rama, Julian creó la carpeta `Laboratorio1` y el archivo `CanalA.java`, implementando la amplificación del mensaje mediante `StringBuilder`, repitiendo el texto recibido 3 veces separado por espacios (commit `af83add`). Posteriormente ajustó la lógica de lectura por consola con `Scanner` (commit `132a2c5`).
+2.  **Desarrollo de Cristian (Estudiante B):**
+    Cristian trabajó en paralelo en su propia rama la lógica del Canal B, implementando la inversión del mensaje mediante `StringBuffer.reverse()`.
+3.  **Resolución de Conflictos en el Merge:**
+    *   **Conflicto:** Al integrar ambas ramas en `develop`, se generó una discrepancia de nomenclatura entre el archivo `CanalA.java` de Julian y la estructura de paquetes requerida (`reto3/Reto3.java`), además de la necesidad de fusionar la lógica de ambos canales en un único archivo.
+    *   **Solución:** Se eliminó el archivo original `CanalA.java` (commit `cbb670a`) y se consolidó todo en `Reto3.java`, integrando el Canal A (`StringBuilder`) y el Canal B (`StringBuffer`) en una sola clase (commit `492571f`).
+4.  **Integración Final (Descifrado):**
+    Se implementó una función combinada mediante una expresión lambda de tipo `Function<String, String>`, que aplica primero la amplificación (usando `stream()` con `IntStream.range()` y `Collectors.joining()`) y luego la inversión del mensaje resultante, cumpliendo así con el requisito de usar `stream()` para procesar las repeticiones y lambda para invocar la función unificada.
+
+---
+
 ##  Reto #2: Carrera en Paralelo (Colaboración: Cristian Moreno & Kevin Angel)
 
 ###  Enunciado y Roles
@@ -158,6 +178,29 @@ gitGraph
         ```java
         comandos.getOrDefault(entrada, () -> System.out.println("Comando no reconocido: " + entrada)).run();
         ```
+
+---
+
+
+##  Reto #7: El Juego del Calamar (Colaboración: Julian Morales & Cristian Moreno)
+
+###  Enunciado y Roles
+*   **Estudiante A (Prueba 1 - Julian Morales):** Eliminar jugadores con deuda mayor a 170.000.000 de wones, usando exclusivamente `stream()`, `filter()` y `collect()`, sin bucles `for`.
+*   **Estudiante B (Prueba 2 - Cristian Moreno):** Solo avanzan jugadores cuyo número de asignación sea par, mediante un dado aleatorio entre 1 y 6.
+*   **Ambos:** Compartir la clase base `Jugador` (con atributos número, nombre, deuda, premio y estado) y sumar el premio acumulado por cada jugador eliminado en ambas pruebas.
+
+###  Desarrollo Paso a Paso
+1.  **Clase compartida:**
+    Para evitar conflictos de duplicidad, se acordó crear primero la clase `Jugador.java` (con el enum `Estado`: ACTIVO, ELIMINADO, GANADOR) de forma independiente en cada rama, replicando exactamente los mismos atributos y métodos, de modo que ambas versiones fueran idénticas al momento del merge.
+2.  **Desarrollo de Julian (Estudiante A):**
+    Julian implementó el método `prueba1` aplicando `stream().filter(j -> j.getDeuda() > 170_000_000)` para identificar a los eliminados, marcando su estado y acumulando el premio correspondiente, sin usar bucles imperativos.
+3.  **Desarrollo de Cristian (Estudiante B):**
+    Cristian implementó el método `pruebaDados`, generando un número aleatorio por jugador activo y filtrando mediante `stream()` a quienes obtuvieran un valor par, marcando como eliminados al resto.
+4.  **Resolución de Conflictos en el Merge:**
+    *   **Conflicto:** Al traer ambas versiones de `Reto7.java` hacia `develop`, ambos integrantes habían nombrado su archivo de igual forma, lo que provocó que la versión de uno sobrescribiera la del otro al integrar los cambios (commit `1a318d4`).
+    *   **Solución:** Se combinaron manualmente ambos métodos (`prueba1` y `pruebaDados`) dentro de un único archivo `Reto7.java`, conservando la lógica de Julian y de Cristian por separado pero compartiendo la misma lista de jugadores y el arreglo de premio acumulado.
+5.  **Choque final:**
+    Se finalizó la integración ejecutando ambas pruebas en secuencia dentro del mismo `main`, leyendo los jugadores por `Scanner`, y sumando el premio total obtenido en ambas rondas (commit `c7e9310`).
 
 ---
 
